@@ -3,65 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rafly Zulfikar - My Links</title>
+    <title>Rafly Zulfikar - My Professional Links</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
+        :root {
+            --primary-color: #00bcd4; /* Biru muda cerah */
+            --secondary-color: #1a1a1a; /* Latar belakang sangat gelap */
+            --accent-color: #f1c40f; /* Kuning aksen */
+            --text-color: #ffffff; /* Putih */
+            --button-bg: #2c3e50; /* Biru keabu-abuan gelap untuk tombol */
+            --button-hover-bg: #34495e; /* Sedikit lebih terang saat hover */
+        }
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             min-height: 100vh;
             margin: 0;
-            background-color: #1a1a1a; /* Warna latar belakang gelap */
-            color: #e0e0e0; /* Warna teks terang */
+            background: linear-gradient(135deg, var(--secondary-color) 0%, #0a0a0a 100%); /* Gradien latar belakang */
+            color: var(--text-color);
             padding: 20px;
             box-sizing: border-box;
+            line-height: 1.6;
         }
+
         .container {
             max-width: 500px;
             width: 100%;
             text-align: center;
+            background-color: rgba(255, 255, 255, 0.05); /* Sedikit transparan */
+            border-radius: 15px;
+            padding: 30px 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Bayangan lebih dalam */
+            backdrop-filter: blur(5px); /* Efek blur pada latar belakang */
+            -webkit-backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
-        h1 {
-            color: #00bcd4; /* Warna judul */
+
+        .profile-section {
             margin-bottom: 30px;
         }
-        .link-button {
-            display: block;
-            width: 80%;
-            padding: 15px 20px;
-            margin: 15px auto;
-            background-color: #333333; /* Warna tombol */
-            color: #e0e0e0;
-            text-decoration: none;
-            border-radius: 8px;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-            font-size: 1.1em;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-        }
-        .link-button:hover {
-            background-color: #555555; /* Warna tombol saat di-hover */
-            transform: translateY(-2px);
-        }
+
         .profile-picture {
-            width: 100px;
-            height: 100px;
+            width: 120px;
+            height: 120px;
             border-radius: 50%;
             object-fit: cover;
-            margin-bottom: 20px;
-            border: 3px solid #00bcd4; /* Bingkai gambar */
+            border: 4px solid var(--primary-color); /* Bingkai warna primer */
+            box-shadow: 0 0 15px rgba(0, 188, 212, 0.6); /* Efek cahaya pada bingkai */
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.2em;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .bio {
+            font-size: 1.1em;
+            color: #ccc;
+            margin-bottom: 25px;
+        }
+
+        .link-button {
+            display: flex; /* Menggunakan flexbox untuk ikon dan teks */
+            align-items: center;
+            justify-content: center;
+            width: 90%; /* Sedikit lebih lebar */
+            padding: 15px 25px;
+            margin: 15px auto;
+            background-color: var(--button-bg);
+            color: var(--text-color);
+            text-decoration: none;
+            border-radius: 10px; /* Sudut lebih membulat */
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            font-size: 1.15em;
+            font-weight: 600;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Bayangan tombol */
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .link-button i {
+            margin-right: 10px; /* Jarak antara ikon dan teks */
+            font-size: 1.2em;
+            color: var(--primary-color); /* Warna ikon */
+        }
+
+        .link-button:hover {
+            background-color: var(--button-hover-bg);
+            transform: translateY(-3px); /* Efek angkat saat hover */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Bayangan lebih intens */
+        }
+
+        /* Responsiveness untuk layar kecil */
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px 15px;
+                border-radius: 10px;
+            }
+            h1 {
+                font-size: 1.8em;
+            }
+            .bio {
+                font-size: 1em;
+            }
+            .link-button {
+                font-size: 1em;
+                padding: 12px 20px;
+                width: 95%;
+            }
+            .profile-picture {
+                width: 100px;
+                height: 100px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Rafly Zulfikar</h1>
-        <a href="https://www.linkedin.com/in/raflyzulfikar/" target="_blank" class="link-button">
-            LinkedIn Profile
+        <div class="profile-section">
+            <img src="https://avatars.githubusercontent.com/u/YOUR_GITHUB_USERNAME?v=4" alt="Profil Picture" class="profile-picture">
+            <h1>Rafly Zulfikar</h1>
+            <p class="bio">Junior Game Developer | Passionate about OOP & Problem Solving</p>
+        </div>
+
+        <a href="https://www.linkedin.com/in/YOUR_LINKEDIN_USERNAME" target="_blank" class="link-button">
+            <i class="fab fa-linkedin"></i> LinkedIn Profile
         </a>
         <a href="https://github.com/raflyzulfikar" target="_blank" class="link-button">
-            GitHub Profile
+            <i class="fab fa-github"></i> GitHub Profile
+        </a>
+        <a href="mailto:your.email@example.com" class="link-button">
+            <i class="fas fa-envelope"></i> Email Me
+        </a>
+        <a href="https://github.com/raflyzulfikar/Tugas-ASIMO-OOP" target="_blank" class="link-button">
+            <i class="fas fa-robot"></i> ASIMO Robot Project
+        </a>
+        <a href="https://github.com/raflyzulfikar/Guess-The-Number-Game-Java" target="_blank" class="link-button">
+            <i class="fas fa-gamepad"></i> Guess The Number Game
         </a>
         </div>
 </body>
